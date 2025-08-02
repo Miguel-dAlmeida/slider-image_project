@@ -1,107 +1,92 @@
 /*
- * @file         Index JS
- * @description  Handles slide transitions, arrow navigation, and dynamic alignment in a responsive image carousel component. Includes accessibility and responsive positioning logic.
- * @author       Mário Miguel de Almeida
- * @last-modified 2025-07-30
- * @dependencies None (vanilla JS)
- * 
+ * JavaScript Logic – Image Slider
+ *
+ * Handles the interactivity of the image carousel, including
+ * navigation between slides, background transitions, and dynamic style updates.
+ *
+ * @author: Mário Miguel de Almeida
+ * @last-modified: 2025-10-07
+ * @dependencies: index.html, style.css
 */
 
-/* Slider Logic */
-
-const prevArrow = document.getElementById('previous-slide');
-const nextArrow = document.getElementById('next-slide');
-const slides = document.querySelectorAll('.slider');
+const leftSliderArrow = document.querySelector('.slider__arrows--left')
+const rightSliderArrow = document.querySelector('.slider__arrows--right')
+const slides = document.querySelectorAll('.slider-background')
 let currentSlide = 0;
 
-prevArrow.addEventListener('click', goToPrevSlide);
+leftSliderArrow.addEventListener('click', returnSlide)
+rightSliderArrow.addEventListener('click', advanceSlide)
 
-function goToPrevSlide() {
-  if (currentSlide === 0) {
-    return
-  }
-  currentSlide--
-  updateSelectedSlide()
-  updateArrowVisibility()
+function advanceSlide() {
+    const lastSlide = currentSlide === slides.length - 1;
+    if (lastSlide) return
+    currentSlide++
+
+    hideSelectedSlide()
+    addCurrentSlide()
+    updateStyles(currentSlide)
 }
 
-nextArrow.addEventListener('click', goToNextSlide);
+function returnSlide() {
+    const firstSlide = currentSlide === 0;
+    if (firstSlide) return
+    currentSlide--
 
-function goToNextSlide() {
-  if (currentSlide === slides.length - 1) {
-    return
-  }
-  currentSlide++
-  updateSelectedSlide()
-  updateArrowVisibility()
+    hideSelectedSlide()
+    addCurrentSlide()
+    updateStyles(currentSlide)
 }
 
-function updateSelectedSlide() {
-  const activeSlide = document.querySelector('.slider-background--selected')
-  activeSlide.classList.remove('slider-background--selected')
-  slides[currentSlide].classList.add('slider-background--selected')
+function hideSelectedSlide() {
+    let selectedSlide = document.querySelector('.slider-background--selected')
+    console.log(selectedSlide)
+    selectedSlide.classList.remove('slider-background--selected')
 }
 
-function updateArrowVisibility() {
-  if (currentSlide === 0) {
-    prevArrow.classList.add('slider-arrows--opacity');
-  } else if (currentSlide === slides.length - 1) {
-    nextArrow.classList.add('slider-arrows--opacity');
-  } else {
-    prevArrow.classList.remove('slider-arrows--opacity');
-    nextArrow.classList.remove('slider-arrows--opacity');
-  }
+function addCurrentSlide() {
+    slides[currentSlide].classList.add("slider-background--selected")
 }
 
-/* Arrow alignment logic */
 
-function alignArrowsToContent() {
-  const activeSlide = document.querySelector('.slider-background--selected');
-  if (!activeSlide) return;
 
-  const content = activeSlide.querySelector('.slider__content');
+function updateStyles(currentSlide) {
+    const sliderLink = document.querySelector('.slider__link')
+    const creditsLink = document.querySelectorAll('.credits__link')
 
-  if (!content || !prevArrow || !nextArrow) return;
 
-  requestAnimationFrame(() => {
-    const contentRect = content.getBoundingClientRect();
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const contentMiddle = contentRect.top + scrollTop + contentRect.height / 2;
+    const sliderLinkColors = [
+        "slider-color--slide-1",
+        "slider-color--slide-2",
+        "slider-color--slide-3",
+        "slider-color--slide-4"
+    ];
+    sliderLink.classList.remove(...sliderLinkColors);
+    sliderLink.classList.add(sliderLinkColors[currentSlide]);
 
-    prevArrow.style.top = `${contentMiddle}px`;
-    nextArrow.style.top = `${contentMiddle}px`;
-  });
+
+    let sliderArrows = document.querySelectorAll(".slider__arrows")
+    if (currentSlide === 0) {
+        sliderArrows[0].classList.add('slider-arrows--transition')
+    } else if (currentSlide === 3) {
+        sliderArrows[1].classList.add('slider-arrows--transition')
+    } else {
+        sliderArrows.forEach(function (arrow) {
+            arrow.classList.remove('slider-arrows--transition')
+        })
+    }
+
+
+    creditsLink.forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            link.classList.add(`slider-color--slide-${currentSlide + 1}`, "slider-transition");
+            link.classList.remove(`slider-color--slide-${currentSlide + 2}`);
+        });
+        link.addEventListener("mouseleave", () => {
+            link.classList.remove(`slider-color--slide-${currentSlide + 1}`);
+            link.classList.add("slider-color--default");
+        });
+    });
 }
 
-window.addEventListener('load', alignArrowsToContent);
+updateStyles(currentSlide)
 
-const observer = new ResizeObserver(() => {
-  alignArrowsToContent();
-});
-
-function observeActiveSlide() {
-  const current = document.querySelector('.slider-background--selected');
-  if (current) observer.observe(current.querySelector('.slider__content'));
-}
-
-document.querySelectorAll('.slider-arrows').forEach(arrow => {
-  arrow.addEventListener('click', () => {
-    setTimeout(() => {
-      alignArrowsToContent();
-      observer.disconnect(); 
-      observeActiveSlide();
-    }, 100); 
-  });
-});
-
-window.addEventListener('resize', alignArrowsToContent);
-window.addEventListener('orientationchange', () => {
-  setTimeout(alignArrowsToContent, 100); 
-});
-
-
-/* Keyboard Accessibility Logic */
-document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowRight') goToNextSlide();
-  if (e.key === 'ArrowLeft') goToPrevSlide();
-});

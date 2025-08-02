@@ -1,8 +1,12 @@
 /**
- * @file         Reset CSS
- * @description  Normalizes default browser styles to ensure visual consistency across different platforms.
- * @author       Mário Miguel de Almeida
- * @last-modified 2025-07-30
+ * Reset CSS
+ *
+ * Normalizes styles across browsers, removing inconsistent margins, paddings,
+ * and other default
+ * styles.
+ *
+ * @author: Mário Miguel de Almeida
+ * @last-modified: 2025-10-07
  */
 
 
@@ -13,18 +17,13 @@
     font-weight: 300;
 }
 
-html {
-    font-size: 62.5%;
-}
-
-
 body {
-    -webkit-box-sizing: border-box;
+    min-height: 100vh;
+
     box-sizing: border-box;
 
     font-family: 'Roboto';
-    color: #000;
-    font-weight: 300;
+    color: black;
 }
 
 img {
@@ -42,16 +41,14 @@ a {
 }
 
 button {
-    margin: 0;
-    padding: 0;
+    background: none;
     border: none;
-
+    padding: 0;
+    margin: 0;
     font: inherit;
     color: inherit;
-
-    background: none;
-    outline: none;
     cursor: pointer;
+    outline: none;
 }
 
 :focus {
