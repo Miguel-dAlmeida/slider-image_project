@@ -189,7 +189,7 @@ O primeiro desafio surgiu logo na etapa inicial: como conectar uma estrutura HTM
 
 Esse projeto, chamado **X-Devs** ([**clique aqui**](https://github.com/Miguel-dAlmeida/projeto-xdevs) para ver o respositório), usava uma lógica semelhante de sobreposição de imagens ao clicar em botões. Relendo seu código, identifiquei uma estrutura próxima do que eu precisava. Adaptei HTML, CSS e JS, e consegui replicar visualmente o design exigido pelo exercício.
 
-> [Clicando nesse link, você pode acessar o repositório da primeira tentativa de codificação do Image Slider.](https://github.com/Miguel-dAlmeida/slider-image_project.git/tree/initial-v1/my-version__image-slider)
+> [Clicando nesse link, você pode acessar o repositório da primeira tentativa de codificação do Image Slider.](https://github.com/Miguel-dAlmeida/slider-image_project/tree/initial-v1)
 
 O problema? Estava tudo errado — por dentro.
 
