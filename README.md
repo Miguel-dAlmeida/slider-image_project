@@ -189,6 +189,8 @@ O primeiro desafio surgiu logo na etapa inicial: como conectar uma estrutura HTM
 
 Esse projeto, chamado **X-Devs** ([**clique aqui**](https://github.com/Miguel-dAlmeida/projeto-xdevs) para ver o respositório), usava uma lógica semelhante de sobreposição de imagens ao clicar em botões. Relendo seu código, identifiquei uma estrutura próxima do que eu precisava. Adaptei HTML, CSS e JS, e consegui replicar visualmente o design exigido pelo exercício.
 
+> [Clicando nesse link, você pode acessar o repositório da primeira tentativa de codificação do Image Slider.](https://github.com/Miguel-dAlmeida/slider-image_project.git/tree/initial-v1/my-version__image-slider)
+
 O problema? Estava tudo errado — por dentro.
 
 Ao assistir à resolução do exercício com o professor Beto (desenvolvedor sênior), percebi o quanto minha abordagem, embora visualmente idêntica, era incorreta nos conceitos. Na minha versão, todo o conteúdo textual permanecia fixo no HTML. A única coisa que mudava era a imagem de fundo via JavaScript. Isso até poderia funcionar, se os conteúdos dos sites reais fossem genéricos. Mas e quando cada slide exige um texto diferente?
