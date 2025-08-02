@@ -1,0 +1,196 @@
+/**
+ * @file         Style CSS
+ * @description  Defines the desktop-first layout structure, styling key components from individual elements to larger containers. Central file for page design and hierarchy setup.
+ * @author       Mário Miguel de Almeida
+ * @last-modified 2025-07-30
+ * @dependencies reset.css, variables.css
+ */
+
+
+.page-wrapper {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    & .slider-arrows {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        width: 4.9rem;
+        height: 7.8rem;
+
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        -webkit-transition: top 0.3s ease;
+        -o-transition: top 0.3s ease;
+        transition: top 0.3s ease;
+
+        &.slider-arrows--left {
+            left: 4%;
+
+            & img {
+                -webkit-transform: rotateY(180deg);
+                        transform: rotateY(180deg);
+            }
+        }
+
+        &.slider-arrows--right {
+            right: 4%;
+        }
+
+        &.slider-arrows--opacity {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+
+    & .slider {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+
+        position: absolute;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+
+        &.slider-background--selected {
+            top: 0;
+
+            width: 100%;
+            min-height: 100vh;
+            /* "top: 0;" -> This allowed the `.slider` not to be overlapped at its top when the screen height decreased */
+
+            opacity: 1;
+        }
+
+        &.slider-background--slide-1 {
+            background-image: url(../images/first_image.jpg);
+        }
+
+        &.slider-background--slide-2 {
+            background-image: url(../images/second_image.jpg);
+        }
+
+        &.slider-background--slide-3 {
+            background-image: url(../images/third_image.jpg);
+        }
+
+        &.slider-background--slide-4 {
+            background-image: url(../images/fourth_image.jpg);
+        }
+
+        & .slider__content {
+            position: relative;
+
+            /* The two lines below are responsible for the automatic and perfect spacing between `.slider__content` and `.credits` */
+            width: 62rem;
+            height: 70rem;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+
+            margin: auto 0 auto 18rem;
+            padding: 6.5rem 6rem;
+
+            background-color: #fff;
+            border-radius: 1rem;
+
+            & .slider__content-title {
+                margin-bottom: 8rem;
+
+                font-size: 5rem;
+                font-weight: 400;
+            }
+
+            & .slider__content-paragraph {
+                margin-bottom: 5rem;
+
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+            }
+
+            & .slider__link {
+                font-size: 3rem;
+                font-weight: 500;
+
+                &.slider-color--slide-1 {
+                    color: var(--slide-1-color);
+                }
+
+                &.slider-color--slide-2 {
+                    color: var(--slide-2-color);
+                }
+
+                &.slider-color--slide-3 {
+                    color: var(--slide-3-color);
+                }
+
+                &.slider-color--slide-4 {
+                    color: var(--slide-4-color);
+                }
+            }
+        }
+
+        & .credits {
+            margin-bottom: 1rem;
+
+            -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+                align-self: center;
+
+            & .credits__paragraph {
+                padding: 0.4rem;
+
+                font-size: 2rem;
+
+                background-color: #fff;
+                border-radius: 0.8rem;
+
+                & .credits__link {
+                    font-weight: 400;
+
+                    &:hover {
+                        font-weight: 700;
+
+                        -webkit-transition: 0.2s ease-in;
+                        -o-transition: 0.2s ease-in;
+                        transition: 0.2s ease-in;
+                    }
+
+
+
+                    &.slider-color--slide-1:hover {
+                        color: var(--slide-1-color);
+                    }
+
+                    &.slider-color--slide-2:hover {
+                        color: var(--slide-2-color);
+                    }
+
+                    &.slider-color--slide-3:hover {
+                        color: var(--slide-3-color);
+                    }
+
+                    &.slider-color--slide-4:hover {
+                        color: var(--slide-4-color);
+                    }
+                }
+            }
+        }
+    }
+}

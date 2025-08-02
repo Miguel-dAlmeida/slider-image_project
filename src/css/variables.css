@@ -1,0 +1,13 @@
+/**
+ * @file         Variables CSS
+ * @description  Defines design tokens (CSS custom properties) to manage and maintain the website’s color palette and other theming values consistently across all stylesheets.
+ * @author       Mário Miguel de Almeida
+ * @last-modified 2025-07-30
+ */
+ 
+:root {
+    --slide-1-color: #C50000;
+    --slide-2-color: #D9DD10;
+    --slide-3-color: #A63A17;
+    --slide-4-color: #10ACDD;
+}
