@@ -11,7 +11,7 @@
 - [Principais Recursos e Abordagens](#principais-recursos-e-abordagens)
 - [Desafios Enfrentados](#desafios-enfrentados)
 - [Aprendizado Adquirido](#aprendizado-adquirido)
-- [Desenvolvimento Contínuo](#desenvolvimento-contínuo)
+- [Desenvolvimento Contínuo e Autossuperação](#desenvolvimento-contínuo-e-autossuperação)
 - [Agradecimentos e Conclusão](#agradecimentos-e-conclusão)
 - [Contato](#contato)
 - [Licença de Uso](#licença-de-uso)
@@ -333,7 +333,7 @@ Lapidei meu entendimento sobre os chamados *Header Comments*, que funcionam como
 
 Esses comentários são úteis para facilitar manutenções, revisar o histórico de mudanças e compreender rapidamente o papel de cada arquivo — inclusive quando o projeto for revisitado no futuro por mim ou por outras pessoas.
 
-## **Desenvolvimento Contínuo**
+## **Desenvolvimento Contínuo e Autossuperação**
 
 Assim como na seção "Desenvolvimento Contínuo" do meu README anterior ([Huddle Landing Page](https://github.com/Miguel-dAlmeida/huddle-landing-page-with-alternating-feature-blocks_project)), uso este espaço para refletir, de forma mais pessoal, sobre a jornada intensa que foi concluir este exercício.
 
@@ -368,7 +368,7 @@ Também não posso deixar de agradecer ao [**DevQuest**](https://www.youtube.com
 
 <div align="center">
       <a href="https://www.youtube.com/@DevemDobro">
-        <img src="./src/images/dev-quest_logo.jpg" width="150px" alt="Logo da empresa DevQuest - Dev em Dobro"/>
+        <img src="./src/images/devQuest_logo.jpg" width="155px" alt="Logo da empresa DevQuest - Dev em Dobro"/>
       </a>
 </div>
 <br>
