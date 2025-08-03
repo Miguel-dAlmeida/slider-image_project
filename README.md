@@ -30,7 +30,7 @@
   <img src="./src/images/gif_finalProject_mobile.gif" alt="Gif do resultado final da página">
 </div>
 
-### [Acesse a página clicando aqui!](https://miguel-dalmeida.github.io/huddle-landing-page-with-alternating-feature-blocks_project/) 
+### [Acesse a página clicando aqui!](https://miguel-dalmeida.github.io/slider-image_project/) 
 
 ## **Apresentação**
 
@@ -78,13 +78,13 @@ Clique com o botão direito sobre a pasta criada e selecione a opção para abri
 ### 3️⃣ Clone o repositório  
 No terminal, execute o seguinte comando para clonar o repositório:  
 ```sh
-git clone https://github.com/Miguel-dAlmeida/image-slider__project.git
+git clone https://github.com/Miguel-dAlmeida/slider-image__project.git
 ```
 ### 4️⃣ Acesse o diretório do projeto
 Após a clonagem, entre na pasta do projeto executando o comando abaixo em seu terminal:
 
 ```sh
-cd image-slider__project
+cd slider-image__project
 ```
 
 ### 5️⃣ Abra o projeto no editor de código
@@ -189,7 +189,7 @@ O primeiro desafio surgiu logo na etapa inicial: como conectar uma estrutura HTM
 
 Esse projeto, chamado **X-Devs** ([**clique aqui**](https://github.com/Miguel-dAlmeida/projeto-xdevs) para ver o respositório), usava uma lógica semelhante de sobreposição de imagens ao clicar em botões. Relendo seu código, identifiquei uma estrutura próxima do que eu precisava. Adaptei HTML, CSS e JS, e consegui replicar visualmente o design exigido pelo exercício.
 
-> [Clicando nesse link, você pode acessar o repositório da primeira tentativa de codificação do Image Slider.](https://github.com/Miguel-dAlmeida/slider-image_project/tree/initial-v1)
+- > [Clicando nesse link,](https://github.com/Miguel-dAlmeida/slider-image_project/tree/initial-v1) você pode acessar a *branch* referente à primeira tentativa de codificação do **Image Slider**.
 
 O problema? Estava tudo errado — por dentro.
 
@@ -212,7 +212,7 @@ Foi um momento duro. Frustração pura. Senti vontade de desistir. Tudo que eu t
 
 Sem a possibilidade de scroll, elementos inevitavelmente se sobrepunham quando a tela era pequena demais. Com esse novo diagnóstico, vi que teria que **refazer tudo de novo**.
 
-Antes de começar essa terceira versão, tomei uma decisão estratégica: fui até meu **Notion**, na minha página chamada [**“Sumários”**](https://gigantic-chef-a6f.notion.site/Sum-rios-105cd10b93ab80bb8190de0aac5c1dbf), onde organizo todos os resumos de programação que escrevo. Lá, selecionei os conteúdos que julgava essenciais para resolver os pontos críticos do projeto — especialmente sobre layout, empilhamento e responsividade. A partir dessa seleção, comecei a reler tudo, relembrando conceitos impo 
+Antes de começar essa terceira versão, tomei uma decisão estratégica: fui até meu **Notion**, na minha página chamada [**“Sumários”**](https://gigantic-chef-a6f.notion.site/Sum-rios-105cd10b93ab80bb8190de0aac5c1dbf), onde organizo todos os resumos de programação que escrevo. Lá, selecionei os conteúdos que julgava essenciais para resolver os pontos críticos do projeto — especialmente sobre layout, empilhamento e responsividade. A partir dessa seleção, comecei a reler tudo, relembrando conceitos importantes.
 
 ### Revisando o que já foi aprendido: um passo para trás para dar dois à frente
 
@@ -238,154 +238,137 @@ Tentei resolver com CSS puro, sem sucesso. Foi então que recorri à ajuda da IA
 > *Confesso que o projeto, no fim das contas, talvez não esteja 100% dentro dos padrões de “código limpo”. Mas estou em paz com isso.*  
 *Estou orgulhoso por ter persistido. Por ter aprendido tanto. Por não ter desistido — mesmo quando tudo dentro de mim dizia para parar.* 
 
+## **Aprendizado Adquirido**
 
-## **Aprendizado Adquirido**  
+O desenvolvimento deste projeto foi mais do que uma tarefa prática — foi um exercício profundo de revisão, consolidação e ampliação do meu conhecimento técnico. Ao longo do processo, esbarrei com dúvidas que me forçaram a estudar, experimentar e refinar conceitos que, até então, eu conhecia apenas na teoria. Abaixo, destaco os principais aprendizados que marcaram essa jornada.
 
-### Nota Prévia: A Importância da Estruturação Pré-Código
+### Aprimoramento do uso do padrão BEM
 
-Antes de começar a relatar tudo que aprendi durante o desenvolvimento deste projeto, gostaria de fazer uma **menção honrosa a uma prática pré-código** que foi fundamental para estruturar o HTML da aplicação e preparar o terreno para a estilização futura em CSS.
+Ao buscar feedback com uma IA, fui alertado sobre um erro recorrente na nomeação das minhas classes CSS: o uso de nomes baseados nas tags HTML, como `.section`, `.main`, etc.
 
-Contextualizando: em etapas anteriores da minha jornada no desenvolvimento web, estudei o módulo **Reforço CSS3** do curso **DevQuest**. Nesse módulo, participei do workshop **"Como Criar um Projeto do Zero sem Travar"**, ministrado pelo professor Beto, onde codificamos o layout do projeto **NFT Preview Card Component** (veja o repositório [clicando aqui](https://github.com/Miguel-dAlmeida/nft-preview-card-component-project)), também do Frontend Mentor.
+Segundo as boas práticas do padrão BEM (Block, Element, Modifier), devemos evitar esse tipo de associação, justamente para manter a separação entre a lógica de estilo e a estrutura semântica do HTML. O foco da nomenclatura deve estar na função ou no componente visual representado, não na tag utilizada.
 
-Durante essa experiência, foram apresentadas diversas técnicas para garantir mais fluidez no desenvolvimento. A prática que quero destacar aqui foi ensinada **antes mesmo de abrir o VS Code**: a análise prévia do design e a criação de uma estrutura inicial.
+**Exemplo ilustrativo:**
 
-Seguindo o que foi feito no workshop, **abri o design da Landing Page Huddle no navegador** e desenhei manualmente diversos quadrados para representar as seções principais do layout. Além disso, **nomeei cada bloco** com suas futuras respectivas tags HTML. Mesmo que algumas adaptações tenham sido necessárias no decorrer da codificação, essa análise pré-código **facilitou demais a organização da estrutura** e deu muito mais segurança para seguir para a implementação prática.
+Incorreto:
 
-Para fazer essa marcação visual, utilizei a extensão do Chrome **Awesome Screenshot & Screen Recorder**, que permite desenhar formas geométricas, escrever anotações e marcar capturas de tela.  
-
-🔗 **Clique aqui para visualizar a estrutura pré-código em nova guia**:  
-[📂 Estrutura Pré-Código](./src/images/estrutura_pre-codigo.png)
-
-### Aprimoramento Técnico em Tags HTML: Revisando `<header>` e `<article>`
-
-Um dos primeiros aprendizados foi consolidar meu entendimento sobre o uso correto das tags semânticas `<header>` e `<article>`.  
-Pesquisei, escrevi prompts, relembrei anotações antigas e consultei documentações — tudo para ter certeza de que estava aplicando essas tags da melhor maneira. Esse processo me ajudou a estruturar o HTML da página de forma certeira.
-
-### Quando usar `<button>` e quando usar `<a role="button">`
-
-Aqui também rolou uma boa evolução. Entendi a diferença prática entre essas duas opções:
-
-- **`<button>`** → quando a ação acontece **dentro da própria página** (enviar formulário, abrir modal, etc.).
-- **`<a href="#">` (com ou sem `role="button"`)** → quando o clique **leva o usuário para outra página** ou para uma âncora.
-
-Uma dúvida simples, mas que agora faz total sentido no meu raciocínio de estrutura.
-
-### Primeiros Passos Reais com Funções ARIA
-
-Tive meu primeiro contato prático com o mundo da acessibilidade.  
-Aprendi como usar de forma consciente os atributos `role`, `aria-label`, `aria-labelledby` e `aria-hidden`, deixando minha marcação HTML ainda mais avançada e inclusiva. Pequeno detalhe que faz muita diferença.
-
-### **Nomeação BEM de Classes: Refinamento Teórico**
-
-Antes de tudo: eu não aprendi BEM dentro do DevQuest. Quem me apresentou essa metodologia foi um colega de curso, durante o desenvolvimento do projeto [Product Preview Card Component](https://github.com/Miguel-dAlmeida/product-preview-card-component_project?tab=readme-ov-file) — e foi ali que comecei a aplicá-la na prática.
-
-Como relatei na seção anterior, travei bastante na hora de nomear as classes. Isso me levou a buscar ainda mais conhecimento em vídeos no YouTube.  
-O grande insight dessa vez foi entender que **não é necessário complicar a nomeação se o contexto já estiver claro**. Ou seja: usar BEM não significa criar nomes gigantescos que reflitam perfeitamente toda a estrutura, mas sim ser **lógico, objetivo e evitar redundâncias**.
-
-Esse entendimento destravou minha mente e me permitiu avançar com muito mais fluidez na organização das classes.
-
-**Veja um exemplo prático do meu antes e depois:**  
-
-- **Antes:**  
 ```html
-<section class="header__content">
-  <div class="header__content-text-container">
-    <h1 class="header__content-text-container-title">...</h1>
-    <p class="header__content-text-container-paragraph">...</p>
-    <a class="header__content-text-container-button btn--default" href="#">...</a>
+<section class="section">
+  <div class="section__image"></div>
+  <div class="section__content">
+    <h1 class="section__title">Título</h1>
+    <p class="section__paragraph">[...]</p>
+    <a href="#" class="section__link">Saiba mais</a>
   </div>
 </section>
 ```
 
-- **Depois:**  
+Correto:
+
 ```html
-<section class="header__content">
-  <div class="header__content-text-container">
-    <h1 class="header__title">...</h1>
-    <p class="header__paragraph">...</p>
-    <a class="header__content-button btn--default" href="#">...</a>
+<section class="slider">
+  <div class="slider__image"></div>
+  <div class="slider__content">
+    <h1 class="slider__title">Título</h1>
+    <p class="slider__paragraph">[...]</p>
+    <a href="#" class="slider__link">Saiba mais</a>
   </div>
 </section>
 ```
 
-Aqui estão os vídeos que me ajudaram nesse refinamento:
+### Media Queries com `aspect-ratio`
 
-- [Seja EXPERT no CSS: Classes ou IDs? Como Organizar e Nomear Seletores](https://www.youtube.com/watch?v=EwT63qDBiAQ)  
-- [Padronize suas Classes CSS com a Nomenclatura BEM](https://www.youtube.com/watch?v=mj6Ze34qGtc)
+Embora essa abordagem não esteja presente na versão final do projeto, utilizei `aspect-ratio`, `min-aspect-ratio` e `max-aspect-ratio` nas primeiras tentativas. Esses recursos me permitiram aplicar estilos com base na proporção entre a largura e a altura da tela, o que é especialmente útil para dispositivos com formatos não convencionais, como tablets ou monitores ultra-wide.
 
-### Imagens: `width` vs `max-width`
+### Simulação de `hover` com JavaScript
 
-Essa aqui foi uma virada de chave.  
-Ao enfrentar um problema de adaptação da seção `.header__content` para telas de largura superior a 1920px, aprendi a diferença real entre usar `width: 100%` e `max-width: 100%`:
+Na primeira tentativa do projeto, aprendi a utilizar os eventos `mouseenter` e `mouseleave` para simular o comportamento de `hover`, adicionando ou removendo estilos conforme a interação do usuário com os links. Embora tenha abandonado essa abordagem na versão final, ela foi fundamental para concluir a lógica da tentativa inicial.
 
-- Com `width: 100%`, a imagem ocupa 100% do espaço do contêiner, independente do tamanho original.
-- Com `max-width: 100%`, a imagem respeita seu tamanho natural, sem esticar além do que foi originalmente projetada.
 
-Foi esse entendimento que me permitiu finalmente adaptar o layout para monitores ultra-wide.
+### Compreensão prática do `return` em funções
 
-### Por fim, Mas não Menos Importante
+Durante a criação da lógica de navegação entre os slides, compreendi melhor o papel do `return` como forma de encerrar uma função de maneira imediata. Isso se mostrou útil para impedir que a função continuasse executando caso o slide atual fosse o primeiro ou o último.
 
-Além dos tópicos principais, também aprendi:
+```js
+function goToPrevSlide() {
+  if (currentSlide === 0) {
+    return;
+  }
+  currentSlide--;
+}
 
-- Como estruturar comentários tipo *Doctype* dentro de arquivos CSS.
-- Detalhes do shorthand `background`, entendendo suas limitações (não dá pra usar `cover` direto no shorthand, por exemplo).
-- Como construir corretamente a propriedade `box-shadow`.
-- Duas formas diferentes de criar animações de sublinhado em links ao passar o mouse (`hover`).
+function goToNextSlide() {
+  if (currentSlide === slides.length - 1) {
+    return;
+  }
+  currentSlide++;
+}
+```
 
-### **Atenção**  
-Para explorar tudo que aprendi, clique no link abaixo e procure por ***Conhecimento Adquirido: Huddle Landing Page With Alternating Feature Blocks***. Lá, você será direcionado para a página do Notion que reúne as anotações do programa **Lapidando HTML e CSS**.  
-🔗 [Lapidando HTML e CSS | Anotações no Notion](https://gigantic-chef-a6f.notion.site/Lapidando-HTML-e-CSS-1a4cd10b93ab8081a48cf19eeef02d02)
+### Diferenças entre `getElementsByClassName` e `querySelector`
+
+Com base na resolução feita em aula, consolidei meu entendimento sobre a vantagem de usar `querySelector`. Essa API é mais moderna, legível e flexível, permitindo a seleção de elementos com mais precisão — o que torna o código mais claro e fácil de manter.
+
+
+### Conteúdo diretamente no HTML x conteúdo via JavaScript
+
+Aprendi que, em carrosséis cujo conteúdo é estático (ou seja, não depende de dados dinâmicos), é preferível incluir todos os slides diretamente no HTML, em vez de alterar dinamicamente o conteúdo com JavaScript. Isso garante melhor acessibilidade e indexação por mecanismos de busca, já que leitores de tela processam apenas o conteúdo presente no HTML no momento do carregamento da página.
+
+### Uso apropriado de `getElementById`
+
+Aprendi que, quando se trata de elementos únicos (como as setas do slider), o uso de `getElementById` é mais indicado. Além de ser mais performático por conta da otimização interna do navegador, ele deixa clara a intenção de que aquele elemento é único e essencial para a lógica, melhorando a manutenção e a clareza do código.
+
+### Ordem correta das Media Queries
+
+Durante a refatoração, entendi que a ordem das media queries era a responsável pela sobrescrição dos estilos responsivos. Em projetos com abordagem Desktop First, o ideal é que as media queries sejam escritas em ordem decrescente (do maior para o menor breakpoint). Já em Mobile First, a ordem deve ser crescente. 
+
+### Uso estratégico de Header Comments
+
+Lapidei meu entendimento sobre os chamados *Header Comments*, que funcionam como uma documentação resumida no topo de arquivos CSS e JS. Adotei um padrão que inclui:
+
+* Descrição do propósito do arquivo
+* Nome do autor
+* Data da última modificação
+* Dependências envolvidas
+
+Esses comentários são úteis para facilitar manutenções, revisar o histórico de mudanças e compreender rapidamente o papel de cada arquivo — inclusive quando o projeto for revisitado no futuro por mim ou por outras pessoas.
 
 ## **Desenvolvimento Contínuo**
 
-Antes de começar a discorrer sobre meu desenvolvimento, quero resgatar um trecho do README do projeto anterior ([Bento Grid](https://github.com/Miguel-dAlmeida/bento-grid_project)):
+Assim como na seção "Desenvolvimento Contínuo" do meu README anterior ([Huddle Landing Page](https://github.com/Miguel-dAlmeida/huddle-landing-page-with-alternating-feature-blocks_project)), uso este espaço para refletir, de forma mais pessoal, sobre a jornada intensa que foi concluir este exercício.
 
-> *"O **Huddle Landing Page With Alternating Feature Blocks** será o último desafio do programa Lapidando HTML e CSS [...]. Agora, estou diante do maior desafio até o momento: essa landing page é a aplicação mais completa e exigente que me propus a desenvolver sozinho. Ela reunirá diversos conceitos e demandará um bom tempo de codificação, tornando-se um marco importante na minha trajetória."*
+Este projeto representa, com exatidão, algo que apelidei de uma das **irregularidades que compõem o terreno das montanhas do meu sonho**.
 
-Cá estou eu: escrevendo essas palavras após vencer esse desafio de forma totalmente individual.  
-Sinto uma mistura de emoção e gratidão, pois essa conquista reflete não só o trabalho dedicado neste projeto, mas em todo o programa **Lapidando HTML e CSS** — foram cerca de dois meses de esforço intenso.
+Sou, por natureza, uma pessoa extremamente autocrítica — e não me envergonho disso. Pelo contrário. Essa voz interna exigente, que não me poupa quando desisto ou entrego menos do que posso, é uma das minhas maiores virtudes. Ela me mantém na linha.
 
-Diferente das seções "Desenvolvimento Contínuo" anteriores, aqui quero abrir um pouco mais sobre minha jornada e meu propósito.
+Costumo imaginar minha trajetória como uma escalada de montanha — e não qualquer montanha. Uma montanha infinita, sem linha de chegada. Porque não existe chegada. Isso aqui é um estilo de vida. Um compromisso diário. E o **Image Slider** foi, sem dúvida, um trecho íngreme dessa escalada.
 
-A verdade é que cada dia para mim é uma grande batalha interna. Trabalho durante o dia, estudo à noite e, ainda assim, tento encontrar tempo para leitura, família, amigos, treino e desenvolvimento pessoal. Meus finais de semana e feriados são, na maioria das vezes, preenchidos por sessões intensas de estudo e muita cafeína.
+Como relatei nas seções anteriores, senti o gosto do fracasso. Várias vezes. Houve momentos em que duvidei de mim mesmo. Me perguntei se essa área era mesmo para mim. Se eu um dia seria um bom programador. Se seria capaz de concluir esse exercício.
 
-Quando falo em batalha interna, refiro-me à minha busca constante por estabilidade emocional: evitar a procrastinação, manter o foco, estar presente e proteger minha mente de padrões de consumo crônico. Tento cultivar pensamentos virtuosos, viver o processo, ser racional e grato — consciente de que não se trata de perfeição, mas de constância.
+> *Então o seu plano falha. Quando as maldições aparecem. Quando você é derrubado nessa porra. Quando tudo desmorona na sua vida e o seu plano está fodido. Que merda você vai fazer? Há apenas uma maldita opção: STAY FUCKING HARD* — **David Goggins**
 
-Ainda assim, não romantizo minha trajetória. Eu falho, cedo à procrastinação e, às vezes, me perco em hábitos insignificantes. Mas tenho orgulho em dizer: venço mais batalhas do que perco.
+Esse trecho me acompanha. Porque eu sei exatamente como é cair. E também sei que fugir da dor nunca foi, e nunca será, a minha saída. Confesso que chorei. Que parei meu cronograma ao sentir o peso da frustração. Que me senti derrotado. Mas, como eu disse: minha voz interna é implacável. Ela me encontrou de novo. E me fez levantar.
 
-> *“Há beleza e verdade na vulnerabilidade, na aceitação das falhas e na renúncia à necessidade de parecer algo que não somos.” — **Abel Pataca***
+Levei alguns anos desde a saída do Ensino Médio para entender que fui feito para viver em ambientes de superação. Equilíbrio, conforto e prazeres fáceis não me sustentam. Eu preciso da disciplina. Da renúncia. Da pressão. Porque são nesses lugares desconfortáveis que me mantenho lúcido, inteiro e estável.
 
-**Mas afinal, pelo que estou lutando? Qual é o meu verdadeiro objetivo?**
+Foi por essa interpretação que decidi continuar. Porque o fracasso, a frustração, os bugs, as limitações técnicas... tudo isso representa o habitat natural de quem quer ser melhor. E é aqui que eu quero estar.
 
-Claro, quero me tornar um desenvolvedor web de excelência, mas isso é apenas a superfície.  
-O que realmente busco é estabilidade — emocional, financeira e profissional.  
-Desejo uma vida serena, tranquila, sem grandes altos e baixos. Prefiro a constância e o "tédio" de uma mente equilibrada ao montanha-russa de prazer e sofrimento alimentado por picos de dopamina.
+Quero estar às 22h de um sábado (como estou agora, escrevendo isso com os pelos do corpo arrepiados), sentado há horas em frente ao computador, fazendo algo difícil. Me superando. Sabe por quê? Porque sou viciado na sensação de conquista que vem **depois** da dor. Essa é a minha droga. Não existe atalho que me dê o que a superação me dá.  
+É literalmente usar a dor como armadura, o tempo todo. É fazer quando tudo no corpo quebrado e na mente fodida diz para parar.
 
-Quero me afastar dos prazeres imediatos que cobram um preço alto depois, e construir uma rotina sólida baseada em disciplina, autocontrole e equilíbrio.
+Voltando agora ao lado técnico: meu próximo passo é resolver o sexto exercício do módulo *Exercícios JS Intermediário* do curso DevQuest. Trata-se do projeto **FAQ com efeito acordeon**, o último desafio desse módulo.
 
-> *“Um homem deve ter controle sobre teus desejos, e ter controle é impor limites a si próprio e não ser controlado pela situação, afinal o desejo tem consequências e a mais grave é corromper o homem e o levar à perdição.” — **Christyan Yury da Silva Matos***
-
-Ter um propósito maior — o que Nietzsche chamava de **"Vontade de Potência"** — dá sentido a toda essa jornada.  
-Com um "porquê" firme, conseguimos suportar quase qualquer desafio.
-
-Falando agora sobre o próximo passo na minha jornada de desenvolvedor:  
-Vou tirar um tempo para revisar todos os projetos que compuseram o programa **Lapidando HTML e CSS** — revisitar meus códigos, reler minhas anotações e consolidar todo o conhecimento adquirido. Pretendo montar um sumário organizado em tópicos desses aprendizados, de modo a facilitar futuras consultas.  
-Só então darei o próximo passo e iniciarei o módulo de **JavaScript Básico** do DevQuest, preparado e mais maduro para os novos desafios que virão.
-
-**Nota final:**  
-O programa **Lapidando HTML e CSS** foi extremamente transformador para mim. Não há comparação entre o "eu" que começou esse programa e o "eu" que o finaliza. Hoje, me sinto confortável e confiante no domínio de **HTML** e **CSS**, preparado para encarar o universo do JavaScript com a base sólida que construí. Estou muito orgulhoso de mim mesmo, sendo a conclusão desse programa uma grande vitória na minha vida.  
-
-> ***Estou orgulhoso da minha trajetória até aqui. Concluir este programa representa uma grande vitória  e um marco significativo na minha vida pessoal e profissional.***
+Nos vemos em breve.
 
 ## **Agradecimentos e Conclusão**
 
-Se você chegou até aqui, meu sincero obrigado por dedicar seu tempo a explorar este projeto e acompanhar minha jornada. Completar esse desafio foi minha maior conquista até aqui, e cada passo reforça minha certeza de que estou no caminho certo para conquistar minha primeira vaga como desenvolvedor web júnior.
+Se você chegou até aqui, meu sincero obrigado por dedicar seu tempo a explorar este projeto e acompanhar minha jornada. Completar esse desafio foi uma grande conquista e cada passo reforça minha certeza de que estou no caminho certo para conquistar minha primeira vaga como desenvolvedor web júnior.
 
 Também não posso deixar de agradecer ao [**DevQuest**](https://www.youtube.com/@DevemDobro), curso do qual sou aluno, por todo o suporte e conhecimento ensinado ao longo da minha jornada.  
 
 <div align="center">
       <a href="https://www.youtube.com/@DevemDobro">
-        <img src="./src/images/devquest_dev_em_dobro_logo.jpg" width="150px" alt="Logo da empresa DevQuest - Dev em Dobro"/>
+        <img src="./src/images/dev-quest_logo.jpg" width="150px" alt="Logo da empresa DevQuest - Dev em Dobro"/>
       </a>
 </div>
 <br>
