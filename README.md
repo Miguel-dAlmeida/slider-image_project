@@ -128,9 +128,8 @@ Se estiver utilizando outro editor, abra a pasta `image-slider__project` manualm
 
 - **Variáveis CSS**: Emprego de variáveis CSS para centralizar e reutilizar as cores do projeto.
 
-
-- **Favicon e Ícones Font Awesome:**  
-  Utilizei um favicon personalizado para reforçar a identidade visual da aplicação.
+- **Favicon Personalizado:**  
+  Utilizei um favicon para reforçar a identidade visual da aplicação.
 
 - **Reset CSS:**  
   Utilizei um arquivo de reset para eliminar inconsistências entre navegadores, criando uma base uniforme para os estilos aplicados.
