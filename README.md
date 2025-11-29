@@ -336,15 +336,15 @@ Esses comentários são úteis para facilitar manutenções, revisar o históric
 
 Assim como na seção "Desenvolvimento Contínuo" do meu README anterior ([Huddle Landing Page](https://github.com/Miguel-dAlmeida/huddle-landing-page-with-alternating-feature-blocks_project)), uso este espaço para refletir, de forma mais pessoal, sobre a jornada intensa que foi concluir este exercício.
 
-Este projeto representa, com exatidão, algo que apelidei de uma das **irregularidades que compõem o terreno das montanhas do meu sonho**.
+Este projeto traduz, com exatidão, uma das irregularidades que dão forma ao terreno montanhoso dos meus sonhos.
 
-Sou, por natureza, uma pessoa extremamente autocrítica — e não me envergonho disso. Pelo contrário. Essa voz interna exigente, que não me poupa quando desisto ou entrego menos do que posso, é uma das minhas maiores virtudes. Ela me mantém na linha.
+Sou, por natureza, uma pessoa extremamente autocrítica — e não me envergonho disso. Pelo contrário. Essa voz interna exigente, que não me poupa quando desisto ou entrego menos do que posso, é uma das minhas maiores virtudes. Ela me mantém na linha e a apelidei de "Dom da Perseverança". De continuar no propósito mesmo quando as coisas não estão ao seu favor.
 
-Costumo imaginar minha trajetória como uma escalada de montanha — e não qualquer montanha. Uma montanha infinita, sem linha de chegada. Porque não existe chegada. Isso aqui é um estilo de vida. Um compromisso diário. E o **Image Slider** foi, sem dúvida, um trecho íngreme dessa escalada.
+Costumo imaginar minha trajetória como uma escalada de montanha — e não qualquer montanha. Uma montanha infinita, sem linha de chegada. A verdade: não existe chegada. É um estilo de vida. Um compromisso diário. E o **Image Slider** foi, sem dúvida, um trecho íngreme dessa escalada.
 
 Como relatei nas seções anteriores, senti o gosto do fracasso. Várias vezes. Houve momentos em que duvidei de mim mesmo. Me perguntei se essa área era mesmo para mim. Se eu um dia seria um bom programador. Se seria capaz de concluir esse exercício.
 
-> *Então o seu plano falha. Quando as maldições aparecem. Quando você é derrubado nessa porra. Quando tudo desmorona na sua vida e o seu plano está fodido. Que merda você vai fazer? Há apenas uma maldita opção: STAY FUCKING HARD* — **David Goggins**
+> *Então o seu plano falha. Quando as maldições aparecem. Quando você é derrubado nessa droga. Quando tudo desmorona na sua vida e o seu plano está ferrado. Que diabos você vai fazer? Há apenas uma maldita opção: Mantenha-se inabalável* — **David Goggins**
 
 Esse trecho me acompanha. Porque eu sei exatamente como é cair. E também sei que fugir da dor nunca foi, e nunca será, a minha saída. Confesso que chorei. Que parei meu cronograma ao sentir o peso da frustração. Que me senti derrotado. Mas, como eu disse: minha voz interna é implacável. Ela me encontrou de novo. E me fez levantar.
 
@@ -352,10 +352,10 @@ Levei alguns anos desde a saída do Ensino Médio para entender que fui feito pa
 
 Foi por essa interpretação que decidi continuar. Porque o fracasso, a frustração, os bugs, as limitações técnicas... tudo isso representa o habitat natural de quem quer ser melhor. E é aqui que eu quero estar.
 
-Quero estar às 22h de um sábado (como estou agora, escrevendo isso com os pelos do corpo arrepiados), sentado há horas em frente ao computador, fazendo algo difícil. Me superando. Sabe por quê? Porque sou viciado na sensação de conquista que vem **depois** da dor. Essa é a minha droga. Não existe atalho que me dê o que a superação me dá.  
-É literalmente usar a dor como armadura, o tempo todo. É fazer quando tudo no corpo quebrado e na mente fodida diz para parar.
+Quero estar às 22h de um sábado (como estou agora, escrevendo isso com os pelos do corpo arrepiados), sentado há horas em frente ao computador, fazendo algo difícil. Me superando. Sabe por quê? Porque sou viciado na sensação de conquista que vem **depois** da dor. Essa é a minha droga. Não existe atalhos ou soluções fáceis. O verdadeiro crescimento reside na dificuldade. No caminho pedregoso.  
+É literalmente usar a dor como armadura, o tempo todo. É fazer quando tudo no corpo quebrado e na mente ferrada diz para parar. Quando tudo pesa demais. 
 
-Voltando agora ao lado técnico: meu próximo passo é resolver o sexto exercício do módulo *Exercícios JS Intermediário* do curso DevQuest. Trata-se do projeto **FAQ com efeito acordeon**, o último desafio desse módulo.
+**Voltando agora ao lado técnico:** meu próximo passo é resolver o sexto exercício do módulo *Exercícios JS Intermediário* do curso DevQuest. Trata-se do projeto **FAQ com efeito acordeon**, o último desafio desse módulo.
 
 Nos vemos em breve.
 
